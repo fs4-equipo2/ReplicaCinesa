@@ -1,0 +1,111 @@
+:root {
+  /* Variables de colores */
+  /* Tipografías */
+  --typo-main-white: #fff;
+  --typo-second-blue: #2bb1ff;
+  --typo-menu-fixed: #0a1c3a;
+  --typo-cards-title: #0a1c3a;
+  --typo-cards-link: #19aaff;
+  --typo-main-hover: #2bb1ff;
+  --typo-footer-columns-hover: #19aaff;
+  --underline-titles: #0068c8;
+  --typo-modal-main: #fff;
+  --typo-modal-second: #bcc0d0;
+  --typo-modal-third: #4e5a6c;
+  --typo-modal-link: #19aaff;
+  --hr-end-section: #4e5a6c;
+  /*Botones*/
+  --btn-buy-hero-hover: #025589;
+  --btn-next-prev-main-border: #bcc0d0;
+  --btn-next-prev-second-border: #4f596e;
+  --btn-next-prev-hover: #025589;
+  --btn-go-up: #0068c8;
+  --btn-checked-bg: #0068c8;
+  --btn-play-trailer-main: #0068c8;
+  --btn-play-trailer-hover: #19aaff;
+  --btn-buy-fixed-menu: #025589;
+  --dropdown-fixed-border: #0068c8;
+  --close-modal-icon: #0068c8;
+  --show-icon: #525455;
+  --error-icon: #ff4955;
+  --search-icon-selected: rgba(255, 255, 255, 0.5);
+  --input-underline-modal: #4e5a6c;
+  --input-underline-modal-hover-main: #19aaff;
+  --input-underline-modal-hover-second: #0068c8;
+  --input-underline-modal-hover-thirs: #fff;
+  --input-underline-modal-error: #ff4955;
+  --scrollbar-modal: #19aaff;
+  --btn-background-main-modal: #0068c8;
+  --location-modal-border: #333d4e;
+  /* Fondos */
+  --background-cinesa-logo-main: #051d36;
+  /* fondo principal:
+  background: radial-gradient(circle at center top,rgb(10,28,58) 0px,rgb(5,17,34) 900px,rgb(5,17,34))*/
+  --background-gradient-main-home: rgb(10, 28, 58);
+  --background-gradient-second-home: rgb(5, 17, 34);
+  --background-gradient-third-home: rgb(5, 17, 34);
+  /*Modales*/
+  --background-location-modal-init: #3e4856;
+  --background-location-modal-open: #0a1c3a;
+  /*Footer*/
+  --background-footer: #0a1c3a;
+}
+
+/**
+* Make all elements from the DOM inherit from the parent box-sizing
+* Since `*` has a specificity of 0, it does not override the `html` value
+* making all elements inheriting from the root box-sizing value
+* See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  margin: 0;
+  padding: 0;
+}
+
+/*
+              Allow percentage-based heights in the application
+            */
+html,
+body,
+#__next {
+}
+
+/*
+              Create a root stacking context
+            */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+
+button {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
