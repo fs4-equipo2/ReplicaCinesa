@@ -5,7 +5,7 @@ import { mdiChevronUp } from "@mdi/js";
 import { mdiChevronLeft } from "@mdi/js";
 import { mdiFilterVariant } from "@mdi/js";
 import { GrLocation } from "react-icons/gr";
-import { FaSearch } from "react-icons/fa";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 import { SocialIcon } from "react-social-icons";
 import { mdiChevronDown } from '@mdi/js';
 
@@ -29,7 +29,7 @@ function Iconos() {
       <div>
         <h3>Ubicacion y Buscador</h3>
         <GrLocation style={{ fontSize: "65px" }} />
-        <FaSearch style={{ fontSize: "65px" }} />
+        < HiMagnifyingGlass style={{ fontSize: "65px" }} />
       </div>
       <hr />
       <div>
