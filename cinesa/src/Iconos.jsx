@@ -7,15 +7,19 @@ import { mdiFilterVariant } from "@mdi/js";
 import { GrLocation } from "react-icons/gr";
 import { FaSearch } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
+import { mdiChevronDown } from '@mdi/js';
 
 
 function Iconos() {
   return (
     <div>
+<img src={"https://www.cinesa.es/media/rynf4t5q/logo-cinesa-blanco.png"} alt="Logo Cinesa" style={{ width: "597px", height: "126px" }}/>
+<hr />
       <h3>Flechas</h3>
       <div>
         <Icon path={mdiChevronUp} size={5} />
-        <Icon path={mdiChevronRight} size={5} />
+        <Icon path={mdiChevronDown} size={5} color="#2bb1ff" />
+        <Icon path={mdiChevronRight} size={5} color="#2bb1ff"  />
         <Icon path={mdiChevronLeft} size={5} />
       </div>
       <hr />
