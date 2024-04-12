@@ -10,6 +10,10 @@ function App() {
       <Tipografia isTitleSection={true} text={"Título sección"} />
       <Tipografia isTitleBanner={true} text={"Título banners"} />
       <Tipografia isTitleCard={true} text={"Título Cards"} />
+      <Tipografia isBodyCard={true} text={"Body Cards"} />
+      <Tipografia isBodySection={true} text={"Body Section"} />
+      <Tipografia isTitleBodySection={true} text={"Titulo Body Sección"} />
+      <Tipografia isFooterLinks={true} text={"Footer links"} />
     </div>
   );
 }

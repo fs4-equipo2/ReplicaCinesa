@@ -12,6 +12,11 @@ const Tipografia = ({
   isTitleMovie,
   isTitleBanner,
   isTitleCard,
+  isBodyCard,
+  isBodySection,
+  isTitleBodySection,
+  isFooterLinks
+
 }) => {
   const classNames = cx({
     titleNavbar: isTitleNavbar,
@@ -20,6 +25,11 @@ const Tipografia = ({
     titleMovie: isTitleMovie,
     titleBanner: isTitleBanner,
     titleCard: isTitleCard,
+    bodyCard: isBodyCard,
+    bodySection: isBodySection,
+    titleBodySection: isTitleBodySection,
+    footerLinks: isFooterLinks
+
   });
   return (
     <p className={classNames} style={{ color: `var(${color})` }}>
