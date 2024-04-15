@@ -3,10 +3,10 @@ import { SliderTopMovies } from "./components/SliderTopMovies/SliderTopMovies";
 
 function App() {
   return (
-    <>
-      <h1>Cinesa</h1>
+    <div className="appContainer">
+      <h1>Cinesa Slider Top</h1>
       <SliderTopMovies />
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,56 @@
+.swiperWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .swiperTop {
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+
+    .swiperSlides {
+      display: flex;
+      flex-direction: row;
+      max-width: 50rem;
+      width: 100%;
+    }
+
+    .swiperBtns {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .btnsCont {
+        cursor: pointer;
+        border: 1px solid white;
+        padding: 0.5rem;
+        transform: rotate(45deg);
+
+        .btnIcon {
+          background: none;
+          border: 0;
+          transform: rotate(-45deg);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .swiperBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+
+    .swiperPagination {
+      cursor: pointer;
+      transform: rotate(45deg);
+      height: 0.8rem;
+      width: 0.8rem;
+      border: 1px solid white;
+    }
+
+    .selected {
+        background-color: white;
+    }
+  }
+}
