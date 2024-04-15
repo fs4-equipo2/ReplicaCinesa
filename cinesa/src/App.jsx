@@ -1,18 +1,13 @@
-
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { SliderTopMovies } from "./components/SliderTopMovies/SliderTopMovies";
 
 function App() {
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-     </div>
+      <h1>Cinesa</h1>
+      <SliderTopMovies />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
