@@ -1,0 +1,146 @@
+.titleNavbar {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    font-weight: 400;
+    transition: 0.35s all;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleNavbar {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      line-height: 24px;
+    }
+  }
+  
+  .titleNavbar:hover,
+  .titleNavbar:focus {
+    color: #19aaff;
+    cursor: pointer;
+  }
+  
+  .titleSwiper {
+    font-family: Machine, Helvetica, Arial, sans-serif;
+    font-size: 54px;
+    letter-spacing: 0;
+    line-height: 46px;
+    font-weight: 400;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleSwiper {
+      font-size: 100px;
+      letter-spacing: 0;
+      line-height: 84px;
+    }
+  }
+  
+  .titleSection {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleSection {
+      font-size: 25px;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+    }
+  }
+  
+  .titleMovie {
+    font-family: Machine, Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.7px;
+    line-height: 26px;
+    font-weight: 400;
+    word-break: break-word;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleMovie {
+      font-size: 34px;
+      letter-spacing: 1px;
+      line-height: 34px;
+    }
+  }
+  
+  .titleBanner {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleBanner {
+      font-size: 22px;
+      letter-spacing: 1px;
+      line-height: 28px;
+    }
+  }
+  
+  .titleCard {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    line-height: 28px;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titleCard {
+      font-size: 25px;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+    }
+  }
+  
+  .bodyCard {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  
+  .bodySection {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .2px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  
+  .titleBodySection {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  
+  .footerLinks {
+    font-family: NunitoSans, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 24px;
+    font-weight: 400;  
+    transition: 0.35s all;
+  }
+  .footerLinks:hover,
+  .footerLinks:focus {
+    color: #19aaff;
+    cursor: pointer;
+  }
