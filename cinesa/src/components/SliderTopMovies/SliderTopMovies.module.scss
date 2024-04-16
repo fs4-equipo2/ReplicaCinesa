@@ -1,56 +1,33 @@
-.swiperWrapper {
+.topSection {
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-  .swiperTop {
+  .topTitle {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+
+    .underline {
+      width: 40%;
+    }
+  }
+
+  .sliderWrapper {
     display: flex;
     flex-direction: row;
-    height: 20rem;
+    max-width: 1170px;
+    width: 100%;
+    height: fit-content;
 
-    .swiperSlides {
+    .swiperTopMovies {
       display: flex;
       flex-direction: row;
-      max-width: 50rem;
-      width: 100%;
-    }
-
-    .swiperBtns {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      .btnsCont {
-        cursor: pointer;
-        border: 1px solid white;
-        padding: 0.5rem;
-        transform: rotate(45deg);
-
-        .btnIcon {
-          background: none;
-          border: 0;
-          transform: rotate(-45deg);
-          color: white;
-        }
-      }
     }
   }
 
-  .swiperBottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.8rem;
-
-    .swiperPagination {
-      cursor: pointer;
-      transform: rotate(45deg);
-      height: 0.8rem;
-      width: 0.8rem;
-      border: 1px solid white;
-    }
-
-    .selected {
-        background-color: white;
-    }
-  }
 }

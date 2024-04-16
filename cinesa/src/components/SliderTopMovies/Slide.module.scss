@@ -1,23 +1,19 @@
 .slideCont {
+  display: flex;
+  flex-direction: column;
+
+  .imgCont {
+    left: 8rem;
+
+    img {
+      width: 12rem;
+      height: auto;
+    }
+  }
+
+  .text {
+    color: white;
     display: flex;
-    flex-direction: row;
-    position: relative;
-
-    .text {
-        z-index: 20;
-        color: white;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .imgCont {
-        z-index: 1;
-        position: absolute;
-        left: 8rem;
-
-        img {
-            width: 40rem;
-            height: auto;
-        }
-    }
+    flex-direction: column;
+  }
 }

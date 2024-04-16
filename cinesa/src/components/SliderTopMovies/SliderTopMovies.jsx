@@ -1,88 +1,68 @@
-import React, { useState, useEffect } from "react";
-import styles from "./SliderTopMovies.module.scss";
+import React, { useRef, useEffect } from "react";
 import { slidesTopMovies } from "./SliderData";
+//Aux components
 import { Slide } from "./Slide";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { SliderNavButtons } from "./SliderNavButtons";
+//Styles
+import styles from "./SliderTopMovies.module.scss";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// Import Swiper React components
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+
+// import required modules
+import { Navigation } from "swiper/modules";
 
 export const SliderTopMovies = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [selectedSlide, setSelectedSlide] = useState(slidesTopMovies[0]);
-  const [pagination, setPagination] = useState(selectedIndex);
 
-  const selectNewImg = (index, slidesTopMovies, next) => {
-    const condition = next
-      ? selectedIndex < slidesTopMovies.length - 1
-      : selectedIndex > 0;
-    const nextIndex = next
-      ? condition
-        ? selectedIndex + 1
-        : 0
-      : condition
-      ? selectedIndex - 1
-      : slidesTopMovies.length - 1;
-    setSelectedSlide(slidesTopMovies[nextIndex]);
-    setSelectedIndex(nextIndex);
-    setPagination(nextIndex);
-  };
-
-  const prevSlide = () => {
-    selectNewImg(selectedIndex, slidesTopMovies, false);
-  };
-
-  const nextSlide = () => {
-    selectNewImg(selectedIndex, slidesTopMovies, true);
-  };
+  const swiperRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      selectNewImg(selectedSlide, slidesTopMovies, true);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, [selectedSlide]);
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.update();
+    }
+  });
+
+  const changePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const changeNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
 
   return (
-    <>
-      <div className={styles.swiperWrapper}>
-        <div className={styles.swiperTop}>
-          <div className={styles.swiperSlides}>
-            <div></div>
-            <div>
-              <Slide
-                title={selectedSlide.title}
-                imgSource={selectedSlide.imgPath}
-              />
-            </div>
-            <div></div>
-          </div>
-          <div className={styles.swiperBtns}>
-            <div className={styles.btnsCont} onClick={prevSlide}>
-              <div className={styles.btnIcon}>
-                <IoIosArrowBack />
-              </div>
-            </div>
-            <div className={styles.btnsCont} onClick={nextSlide}>
-              <div className={styles.btnIcon}>
-                <IoIosArrowForward />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.swiperBottom}>
+    <div className={styles.topSection}>
+      <div className={styles.topTitle}>
+        <h2>TOP PELÍCULAS</h2>
+        <hr className={styles.underline} />
+        <hr className={styles.underline} />
+      </div>
+      <div className={styles.sliderWrapper}>
+        <Swiper
+          loop={true}
+          slidesPerView={4}
+          spaceBetween={60}
+          className={styles.swiperTopMovies}
+          ref={swiperRef}
+        >
           {slidesTopMovies.map((movie, index) => {
             return (
-              <div
-                key={movie.title}
-                className={pagination !== index ? styles.swiperPagination : `${styles.swiperPagination} ${styles.selected}`}
-                onClick={() => {
-                  setSelectedIndex(index);
-                  setSelectedSlide(movie);
-                  setPagination(index);
-                }}
-              ></div>
+              <SwiperSlide key={index}>
+                <Slide title={movie.title} imgSource={movie.imgPath} />
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
       </div>
-    </>
+      <div className={styles.btnsWrapper}>
+        <SliderNavButtons prevFunc={changePrev} nextFunc={changeNext} />
+      </div>
+    </div>
   );
 };
