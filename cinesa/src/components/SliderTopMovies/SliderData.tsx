@@ -21,19 +21,19 @@ export const slidesTopMovies: SlideFormat[] = [
     imgPath: "../../../public/images/SliderTopMovies/cazafantasmas.jpeg",
   },
   {
-    title: "Dune: Parte Dos",
-    imgPath: "../../../public/images/SliderTopMovies/dune_two.jpeg",
-  },
-  {
-    title: "La familia Benetón",
-    imgPath: "../../../public/images/SliderTopMovies/familia_beneton.png",
-  },
-  {
     title: "+Cuñados",
     imgPath: "../../../public/images/SliderTopMovies/cunados.jpeg",
   },
   {
     title: "Abigail",
     imgPath: "../../../public/images/SliderTopMovies/abigail.jpeg",
+  },
+  {
+    title: "Àma Gloria",
+    imgPath: "../../../public/images/SliderTopMovies/ama_gloria.jpeg",
+  },
+  {
+    title: "Anatomía de una caída",
+    imgPath: "../../../public/images/SliderTopMovies/anatomia_caida.jpeg",
   }
 ];

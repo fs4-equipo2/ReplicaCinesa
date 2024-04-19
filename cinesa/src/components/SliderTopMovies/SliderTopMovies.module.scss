@@ -1,3 +1,5 @@
+@import "../../styles/_global.scss";
+
 .topSection {
   padding: 2rem 2rem;
   display: flex;
@@ -6,28 +8,30 @@
   gap: 1rem;
 
   .topTitle {
-    color: white;
+    color: var(--typo-main-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
 
+    .mainText {
+      padding-bottom: 0.8rem;
+    }
+
     .underline {
       width: 40%;
+      color: var(--underline-titles);
+      margin: 0.1rem 0;
     }
   }
 
   .sliderWrapper {
-    display: flex;
-    flex-direction: row;
     max-width: 1170px;
     width: 100%;
-    height: fit-content;
 
     .swiperTopMovies {
-      display: flex;
-      flex-direction: row;
+      width: 18.75;
+      height: 28rem;
     }
   }
-
 }

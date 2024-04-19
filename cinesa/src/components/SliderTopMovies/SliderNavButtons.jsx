@@ -7,13 +7,13 @@ export const SliderNavButtons = ({ prevFunc, nextFunc}) => {
   return (
     <div className={styles.swiperBtns}>
       <div className={styles.btnsCont} >
-        <div className={styles.btnIcon}>
-          <IoIosArrowBack onClick={prevFunc} />
+        <div className={styles.btnIconCont}>
+          <IoIosArrowBack className={styles.arrowIcon} onClick={prevFunc} />
         </div>
       </div>
       <div className={styles.btnsCont} >
-        <div className={styles.btnIcon}>
-          <IoIosArrowForward onClick={nextFunc} />
+        <div className={styles.btnIconCont}>
+          <IoIosArrowForward className={styles.arrowIcon} onClick={nextFunc} />
         </div>
       </div>
     </div>

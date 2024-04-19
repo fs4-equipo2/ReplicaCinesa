@@ -6,16 +6,10 @@ import { SliderNavButtons } from "./SliderNavButtons";
 //Styles
 import styles from "./SliderTopMovies.module.scss";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-
-// import required modules
-import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const SliderTopMovies = () => {
-
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -39,7 +33,7 @@ export const SliderTopMovies = () => {
   return (
     <div className={styles.topSection}>
       <div className={styles.topTitle}>
-        <h2>TOP PELÍCULAS</h2>
+        <h2 className={styles.mainText}>TOP PELÍCULAS</h2>
         <hr className={styles.underline} />
         <hr className={styles.underline} />
       </div>
@@ -47,7 +41,7 @@ export const SliderTopMovies = () => {
         <Swiper
           loop={true}
           slidesPerView={4}
-          spaceBetween={60}
+          spaceBetween={30}
           className={styles.swiperTopMovies}
           ref={swiperRef}
         >
