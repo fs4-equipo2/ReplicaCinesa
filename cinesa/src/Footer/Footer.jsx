@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   return (
@@ -103,9 +104,47 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerSocialMedia}>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
+      <h3>Redes Sociales</h3>
+      <div className={styles.footerSM}>
+        <SocialIcon
+          url="https://facebook.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+        />
+        <SocialIcon
+          url="https://twitter.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+        />
+        <SocialIcon
+          url="https://instagram.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+        />
+        <SocialIcon
+          url="https://linkedin.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+        />
+        <SocialIcon
+          url="https://tiktok.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+
+        />
+        <SocialIcon
+          url="https://youtube.com"
+          bgColor="white"
+          fgColor="transparent"
+          style={{ width: "30px", height: "30px" }}
+
+        />
+        </div>
       </div>
     </footer>
   );

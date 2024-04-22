@@ -1,7 +1,8 @@
 import "./App.css";
 import Footer from "./Footer/Footer";
 import "./App.css";
-import Iconos from "./Iconos.jsx";
+import Iconos from "./Iconos";
+
 
 function App() {
   return (
@@ -9,10 +10,10 @@ function App() {
       <div>
         <h1>Footer</h1>
         <Footer />
+
+
       </div>
-      <div>
-        <Iconos />
-      </div>
+
     </>
   );
 }
