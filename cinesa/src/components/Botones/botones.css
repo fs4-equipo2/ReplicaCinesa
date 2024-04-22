@@ -1,0 +1,64 @@
+
+
+.normalFondoAzul{
+    background-color: #0068C8;
+    color: white;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.normalFondoBlanco{
+    background-color: white;
+    color: #0068C8;
+    border: 1px solid #0068C8;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+/* Boton con fondo transparente y esquina cortada */
+
+.esquinaFondoNegro{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    clip-path: polygon(-1px -1px, -1px -10px, calc(100% + 1px) -10px, calc(100% + 1px) 0, calc(100% + 1px) calc(100% - 15px), calc(100% - 15px) calc(100% + 1px), 0 100%, 0 calc(100% - 4px));
+    cursor: pointer;
+}
+
+.puntaTransparente{
+    clip-path: polygon(-1px -1px,-1px -10px,calc(100% + 1px) -10px,calc(100% + 1px) 0,calc(100% + 1px) calc(100% - 15px),calc(100% - 15px) calc(100% + 1px),0 100%,0 calc(100% - 4px));
+};
+
+/* resolver punta!! fin del boton */
+
+
+
+.esquinaFondoAzul{
+    background-color: #0068C8;
+    color: white;
+
+    font-size: 18px;
+
+    border-radius: 0;
+    clip-path: polygon(-1px -1px, -1px -10px, calc(100% + 1px) -10px, calc(100% + 1px) 0, calc(100% + 1px) calc(100% - 15px), calc(100% - 15px) calc(100% + 1px), 0 100%, 0 calc(100% - 4px));
+    cursor: pointer;
+}
+
+
+.iconoDireccion{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    rotate: 90;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+.guardarFavoritos{
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    cursor: pointer;
+}
