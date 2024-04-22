@@ -1,15 +1,14 @@
 
-import viteLogo from '/vite.svg'
 import './App.css'
+import Footer from './Footer/Footer'
 
 function App() {
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
+        <h1>Footer</h1>
+        < Footer />
      </div>
     </>
   )

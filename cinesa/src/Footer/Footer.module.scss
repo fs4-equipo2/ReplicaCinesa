@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 48px;
+  border: white 2px solid;
+  max-width: 1170px;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.footerColumns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-bottom: 30px;
+  border-bottom: white 2px solid;
+}
+.footerColumn {
+  flex-basis: 50%;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.footerSocialMedia {
+  padding-top: 30px;
+  text-align: right;
+padding-right: 30px;
+
+  a {
+    margin-left: 10px;
+  }
+}
