@@ -1,0 +1,39 @@
+@import "../../styles/_global.scss";
+
+.swiperBtns {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+
+  .btnsCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--btn-next-prev-main-border);
+    padding: 0.5rem;
+    transform: rotate(45deg);
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &:hover {
+      border-color: var(--btn-next-prev-cont-border-hover);
+      .btnIconCont {
+        color: var(--btn-next-prev-hover);
+      }
+    }
+
+    .btnIconCont {
+      background: none;
+      border: 0;
+      transform: rotate(-45deg);
+      color: var(--btn-next-prev-fill);
+
+      .arrowIcon {
+        width: 30px;
+        height: 45px;
+        stroke-width: 15;
+      }
+    }
+  }
+}
