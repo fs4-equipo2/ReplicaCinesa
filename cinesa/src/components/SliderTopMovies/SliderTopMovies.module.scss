@@ -33,5 +33,9 @@
       width: 18.75;
       height: 28rem;
     }
+
+    .returning {
+      transition: transform 1s ease-in-out;
+    }
   }
 }

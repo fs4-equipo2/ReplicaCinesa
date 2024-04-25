@@ -1,32 +1,68 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { slidesTopMovies } from "./SliderData";
-//Aux components
 import { Slide } from "./Slide";
 import { SliderNavButtons } from "./SliderNavButtons";
-//Styles
 import styles from "./SliderTopMovies.module.scss";
 import "swiper/css";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFlip } from "swiper/modules";
 
 export const SliderTopMovies = () => {
   const swiperRef = useRef(null);
+  const [isReturning, setIsReturning] = useState(false);
+  const [isEndReached, setIsEndReached] = useState(false);
 
   useEffect(() => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.update();
-    }
-  });
+    const swiperInstance = swiperRef.current.swiper;
+    swiperInstance.on("reachEnd", handleReachEnd);
+    swiperInstance.on("fromEdge", handleFromEdge);
+    return () => {
+      swiperInstance.off("reachEnd", handleReachEnd);
+      swiperInstance.off("fromEdge", handleFromEdge);
+    };
+  }, []);
+
+  const handleReachEnd = () => {
+    setIsEndReached(true);
+  };
+
+  const handleFromEdge = () => {
+    setIsEndReached(false);
+  };
 
   const changePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
+      const swiperInstance = swiperRef.current.swiper;
+      if (swiperInstance.isBeginning) {
+        setIsReturning(true);
+        setTimeout(() => {
+          setIsReturning(false);
+          swiperInstance.slideTo(swiperInstance.slides.length - 1, 1000, false);
+          swiperInstance.loop = false;
+        }, 1000);
+      } else {
+        swiperInstance.slidePrev();
+        if (swiperInstance.isEnd) {
+          swiperInstance.loop = true;
+        }
+      }
     }
   };
 
   const changeNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
+      const swiperInstance = swiperRef.current.swiper;
+      if (isEndReached && !isReturning) {
+        setIsReturning(true);
+        setTimeout(() => {
+          setIsReturning(false);
+          swiperInstance.slideTo(0, 1000, false);
+          swiperInstance.loop = true;
+        }, 1000);
+      } else {
+        setIsReturning(false);
+        swiperInstance.slideNext();
+      }
     }
   };
 
@@ -39,10 +75,13 @@ export const SliderTopMovies = () => {
       </div>
       <div className={styles.sliderWrapper}>
         <Swiper
+          modules={[EffectFlip]}
           loop={true}
           slidesPerView={4}
           spaceBetween={30}
-          className={styles.swiperTopMovies}
+          className={`${styles.swiperTopMovies} ${
+            isReturning ? styles.returning : ""
+          }`}
           ref={swiperRef}
         >
           {slidesTopMovies.map((movie, index) => {
